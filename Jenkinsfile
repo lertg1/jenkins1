@@ -8,7 +8,7 @@ pipeline {
     stages {
         stage('Clone') {
             steps {
-                git 'https://github.com/lertg1/jenkins1.git'
+                git url:'https://github.com/lertg1/jenkins1.git', branch:'main'
             }
         }
 
