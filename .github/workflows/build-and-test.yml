@@ -1,0 +1,14 @@
+name: Build and Test
+on:
+  push:
+    branches: [ main ] # Run on pushes to the main branch
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest # Run on Ubuntu virtual machine
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v2
+      - name: Install Dependencies
+        run: npm install
+      - name: Run Tests
+        run: npm test
